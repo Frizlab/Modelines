@@ -51,14 +51,14 @@ class ModelineParser_LegacyVIM(ModelineParser):
 	__MODELINE_TYPE_1  = re.compile(r"[\x20\t](st|sublime|vim):\x20?set\x20(.*):.*$")
 	__MODELINE_TYPE_2  = re.compile(r"[\x20\t](st|sublime|vim):(.*):.*$")
 	
-	__KEY_VALUE = re.compile(r"""
-		(?x) \s*
-		(?P<key>\w+)  \s* (?P<op>\+?=)  \s*  (?P<value>
-			(?:  "(?:\\.|[^"\\])*"
-				| [\[\{].*
-				| [^\s:]+
-			)
-		)"""
+	__KEY_VALUE = re.compile(
+		r"""(?x) \s*
+			(?P<key>\w+)  \s* (?P<op>\+?=)  \s*  (?P<value>
+				(?:  "(?:\\.|[^"\\])*"
+					| [\[\{].*
+					| [^\s:]+
+				)
+			)"""
 	)
 	__KEY_ONLY  = re.compile(r"""(?x)\s*(?P<key>\w+)""")
 	

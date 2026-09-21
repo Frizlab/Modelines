@@ -62,8 +62,9 @@ To get proper completion and errors in the editor when working on this repo,
   "venvPath": ".",
   "venv": "sublime-modelines",
   "extraPaths": [
-    "/Applications/Sublime Text.app/Contents/MacOS/Lib/python38",
-    "/Users/YOUR_USER_NAME/Library/Application Support/Sublime Text/Lib/python38",
+    /* Replace python314 by python38 if you’re on Sublime <4213 (Python 3.8 instead of 3.14). */
+    "/Applications/Sublime Text.app/Contents/MacOS/Lib/python314",
+    "/Users/YOUR_USER_NAME/Library/Application Support/Sublime Text/Lib/python314",
     "/Users/YOUR_USER_NAME/Library/Application Support/Sublime Text/Packages/UnitTesting",
   ]
 }
